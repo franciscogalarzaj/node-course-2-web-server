@@ -21,6 +21,14 @@ app.get('/', (req, res) => {
     })
 });
 
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTittle: 'Projects page',
+        projectsMessage: 'Projects by',
+        userName: os.userInfo().username
+    });
+});
+
 app.get('/about', (req, res) => {
     res.render('about.hbs', {
         pageTittle: 'About page'
